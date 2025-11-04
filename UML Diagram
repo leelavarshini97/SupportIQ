@@ -1,0 +1,101 @@
+Use Case Diagram (Actors & Interactions)
+
+Actors:
+
+1) Mentor
+
+2) Mentee
+
+3) Admin (future)
+
+Use Cases:
+
+1) Mentor:
+
+  ->Login / Signup
+
+  ->Create Resource
+
+  ->Manage Resources (Edit/Delete)
+
+  ->View Mentee Progress
+
+2) Mentee:
+
+  ->Login / Signup
+
+  ->View Learning Path
+
+  ->View Resource (Video, Help Doc, FAQ, Quiz, Ticket)
+
+  ->Submit Quiz / Update Progress
+
+3) Admin (Future):
+
+  ->Track Analytics
+
+  ->Generate AI Suggestions
+
+Diagram:
+
++------------------+
+|      User        |
++------------------+
+| - userId         |
+| - name           |
+| - email          |
+| - role (Mentor/Mentee) |
++------------------+
+| + login()        |
+| + signup()       |
++------------------+
+
+          ▲
+          │
+ ┌────────┴────────┐
+ |                 |
+ |                 |
+ v                 v
++------------------+        +------------------+
+|     Mentor       |        |     Mentee       |
++------------------+        +------------------+
+| +createResource()|        | +viewResources() |
+| +manageResources()|       | +submitQuiz()    |
+| +viewProgress()  |        | +trackProgress() |
++------------------+        +------------------+
+
++------------------+
+|    Resource      |
++------------------+
+| - resourceId     |
+| - title          |
+| - description    |
+| - category       |
++------------------+
+| +addSubmodule()  |
+| +editResource()  |
+| +deleteResource()|
++------------------+
+          │
+          ├───────────────────────────────────────────┐
+          │                                           │
+   ┌─────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
+   │   Video     │ │   HelpDoc     │ │     FAQ       │ │     Quiz      │ │    Ticket     │
+   +-------------+ +---------------+ +---------------+ +---------------+ +---------------+
+   | id          | | id            | | id            | | id            | | id            |
+   | title       | | title         | | question      | | question      | | title         |
+   | url         | | content       | | answer        | | options[]     | | issueDesc     |
+   |              |                 |                 | | correctAnswer | | resolution    |
+   +-------------+ +---------------+ +---------------+ +---------------+ +---------------+
+
++--------------------------+
+|     ProgressTracker      |
++--------------------------+
+| - menteeId               |
+| - resourceId             |
+| - status (NotStarted/InProgress/Completed) |
+| - quizScore              |
++--------------------------+
+| +updateProgress()        |
+| +getProgress()           |
++--------------------------+
