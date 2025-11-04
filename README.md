@@ -25,18 +25,7 @@ In a support environment, new joiners often face repetitive onboarding and knowl
 
 ## 🧱 Core API Endpoints (Powered by MockWave)
 
-| Module | Endpoint | Description |
-|---------|-----------|-------------|
-| 👥 Users | [`get-users`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-users) | List all mentors and mentees |
-| 📚 Resources | [`get-resources`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources) | List all learning modules |
-| 🎥 Videos | [`get-resources-videos`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-videos) | Videos linked to resources |
-| 📘 Help Docs | [`get-resources-helpdocs`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-helpdocs) | Support documentation |
-| ❓ FAQs | [`get-resources-faqs`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-faqs) | Common questions and answers |
-| 🧩 Quizzes | [`get-resources-quizzes`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-quizzes) | Assessment questions |
-| 🎟️ Tickets | [`get-resources-tickets`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-tickets) | Example customer tickets |
-| 📈 Progress | [`get-resources-progress`](https://admin.mockwave.io/mockwave/leela_751828/myprojects/supportiq/v1/get-resources-progress) | Track mentee learning progress |
-
----
+https://docs.google.com/document/d/119FGbaShE3pvsobDUw8mZ7E0jmxSUvPFg6SRNlhIsLw/edit?usp=sharing
 
 ## 🧠 Data Model Summary
 
