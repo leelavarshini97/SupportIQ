@@ -1,7 +1,18 @@
 # 🎯 SupportIQ – Mock API (Built using MockWave)
 
-**SupportIQ** is a mentorship-based learning platform designed for technical support professionals to upskill efficiently.  
-This mock API simulates the backend logic of the platform — including user management, learning modules, videos, FAQs, and progress tracking.
+SupportIQ is an organized, mentorship-driven learning platform designed for technical support professionals. It helps mentors train new team members efficiently by structuring learning content and making repeated tasks easier to learn.
+
+The platform concept includes:
+
+1) Articles and Help Docs for foundational knowledge
+
+2) Quizzes to reinforce learning
+
+3) Previously handled repetitive tickets as practical examples
+
+4) Progress tracking dashboards to monitor mentee growth
+
+This mock API simulates the backend workflows, demonstrating how resources, users, and learning paths could interact to create a structured, self-paced learning experience.
 
 ---
 
@@ -54,11 +65,3 @@ In a support environment, new joiners often face repetitive onboarding and knowl
 | **JSON** | Data structure |
 | **GitHub** | Documentation and version control |
 
----
-
-## 💡 Key Highlights
-
-✅ Clean RESTful structure (GET endpoints for modules)  
-✅ Demonstrates backend design thinking  
-✅ Showcases product mindset — modular, mentor-led learning  
-✅ Ready for integration into a simple frontend or dashboard  
