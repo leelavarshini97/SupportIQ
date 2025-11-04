@@ -1,0 +1,138 @@
+🏠 1. Landing Page (Login / Role Selection)
+
+Purpose: Entry point for users (mentor / mentee)
+
+Modules:
+
+Login / Signup
+
+Role Selection (Mentor | Mentee)
+
+Redirects:
+
+Mentor → Mentor Dashboard
+
+Mentee → Mentee Dashboard
+
+Flow:
+
+Landing Page → Auth API → Redirect to Dashboard
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+👨‍🏫 2. Mentor Dashboard
+
+Purpose: Central control panel for mentors
+
+Modules (Cards or Tabs):
+
+Create Resource
+
+Manage Resources
+
+View Mentee Progress
+
+Notifications
+
+Internal Pages:
+
+Create Resource Page
+
+Input: Title, Description, Category
+
+Submodules to add: Video | Quiz | Help Doc | FAQ | Ticket Example
+
+Save → POST /resources
+
+Manage Resources Page
+
+List of created modules
+
+Edit / Delete / Add Sub-Modules
+
+Mentee Progress Page
+
+View mentees and progress %
+
+Filter by Resource / Mentee
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+👩‍💻 3. Mentee Dashboard
+
+Purpose: Learning & tracking center for mentees
+
+Modules (Tabs or Sections):
+
+My Learning Path
+
+Resources Assigned
+
+Quizzes
+
+Progress Tracker
+
+Internal Pages:
+
+My Learning Path
+
+List of modules created by mentors
+
+Shows “Not Started / In Progress / Completed”
+
+Resource Details Page
+
+Video → Embedded player
+
+Help Docs → Expandable view
+
+FAQs → Accordion list
+
+Quizzes → Multiple choice form
+
+Tickets → Case study with “Mark as Completed”
+
+Progress Page
+
+Fetch data via /get-resources-progress
+
+Show charts (optional future feature)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📚 4. Resource Structure (Database View)
+
+Each Resource has submodules:
+
+Resource
+ ┣━ Videos (id, title, url)
+ ┣━ Help Docs (id, title, content)
+ ┣━ FAQs (id, question, answer)
+ ┣━ Quizzes (id, question, options[], correctAnswer)
+ ┗━ Tickets (id, title, issueDescription, resolutionSteps)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚙️ 5. System Backend Flow (Concept)
+
+Actors: Mentor, Mentee, MockWave API
+
+Flow:
+
+Mentor ─┬─► Create Resource (POST /resources)
+        └─► Add Videos, Docs, Quizzes (POST /resources/submodules)
+Mentee ─► Fetch Resources (GET /get-resources)
+Mentee ─► Submit Quiz / Update Progress (POST /resources/progress)
+System ─► Store Progress → GET /get-resources-progress
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📈 6. Admin / Analytics (Future Scope)
+
+Modules (Optional Enhancements):
+
+Track overall mentee engagement
+
+Suggest learning paths via AI
+
+Generate mentor performance insights
